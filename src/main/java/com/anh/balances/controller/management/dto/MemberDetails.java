@@ -29,14 +29,13 @@ public record MemberDetails(
 
 	    public String getDisplayAddress() {
 	    	
-	    	if(StringUtils.hasLength(address) 
+	      if(StringUtils.hasLength(address) 
 	    	   || StringUtils.hasLength(township) 
 	    	   ||  StringUtils.hasLength(region)) {
 	    		 
 	    	return Stream.of(address,township,region)
 	    		      .filter(StringUtils::hasLength)
 	    		      .collect(Collectors.joining(","));
-	    		
 	    	}
 	    	
 	    	return null;

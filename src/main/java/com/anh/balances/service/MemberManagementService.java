@@ -48,7 +48,7 @@ public class MemberManagementService {
 	}
 
 	public MemberDetails findById(long id) {
-		return safeCall(memberRepo.findById(id).map(MemberDetails::from), RESOURCE_NAME,KEY_NAME,id);
+		return safeCall(memberRepo.findById(id).map(MemberDetails::from), RESOURCE_NAME, KEY_NAME, id);
 	}
 
 	public PageResult<MemberListItem> search(MemberSearch search, int page, int size) {
